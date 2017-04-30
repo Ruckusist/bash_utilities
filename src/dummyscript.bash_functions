@@ -29,12 +29,11 @@ echo -e "\n\n" >> $LOG
 
 HSTAR="\e[1;32m*\e[0m\e[37m"
 
-function printResult() #{{{
+function printResult()
 {
 	[[ $1 -ne 0 ]] && echo -e "\e[1;31m[FAIL]\e[0m" || echo -e "\e[1;32m[OK]\e[0m\e[37m"
 	return 0
 }
-#}}}
 
 #	Take 1 argument: the location of the file to retrieve
 function getFile() #{{{
